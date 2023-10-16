@@ -143,10 +143,7 @@ html {
   width: 100vw;
 }
 
-.leader-section {
-}
-
-.leader-section__note {
+.section__note {
   color: #268eec;
   text-align: center;
   font-size: 1.6rem;
@@ -302,4 +299,126 @@ html {
   top: 0;
   left: 0;
   object-fit: contain;
+}
+
+.revolution-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 13.2rem;
+}
+
+.wallet-cards {
+  position: relative;
+  /* flex: 0 1 50%; */
+  width: 604px;
+  height: 505px;
+}
+
+.wallet-card {
+  width: 440px;
+  height: 434px;
+}
+
+.wallet-card__img {
+  width: inherit;
+  height: inherit;
+}
+
+.wallet-card--back {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.wallet-card--front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.revolution-section__title {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 140%;
+  max-width: 440px;
+  margin-bottom: 3.2rem;
+}
+.revolution-section__text {
+  color: #e0e2e9;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 392px;
+  margin-bottom: 4rem;
+}
+
+.pro-section {
+  width: 100%;
+  margin-bottom: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pro-section__title {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 140%;
+  max-width: 498px;
+  margin-bottom: 3.2rem;
+}
+
+.pro-section__text {
+  color: #e0e2e9;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 392px;
+  margin-bottom: 4rem;
+}
+.pro-section__img {
+  /* flex: 0 1 50%; */
+  width: 100%;
+  max-width: 500px;
+  height: 0;
+  padding-bottom: 52%;
+  position: relative;
+}
+
+.pro-section__item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: contain;
+}
+
+.confidence-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confidence-section__title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 140%;
+  margin-bottom: 3.2rem;
+}
+
+.confidence-section__text {
+  color: #e0e2e9;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 604px;
+  margin-bottom: 6.9rem;
 }
