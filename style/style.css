@@ -105,7 +105,7 @@ html {
   border: 1px solid #0077e2;
 }
 
-.menu-dialog-popup__icon {
+/* .menu-dialog-popup__icon {
   width: 40px;
   height: 24px;
   margin-right: 1.2rem;
@@ -115,6 +115,27 @@ html {
 .menu-dialog-popup__burger {
   width: inherit;
   height: inherit;
+} */
+
+.menu-dialog-popup__icon {
+  margin-right: 1.2rem;
+}
+
+.burger {
+  /* display: inline-flex; */
+  flex-direction: column;
+  background-color: transparent;
+  width: 40px;
+  height: 14px;
+  justify-content: space-between;
+  visibility: hidden;
+  display: none;
+}
+
+.burger__line {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 760px) {
@@ -126,8 +147,9 @@ html {
     display: none;
   }
 
-  .menu-dialog-popup__icon {
-    display: block;
+  .burger {
+    visibility: visible;
+    display: inline-flex;
   }
 }
 
@@ -168,20 +190,39 @@ html {
   background-color: #191b25;
 }
 
-.menu-dialog-popup__icon-close {
-  position: absolute;
-  top: -50px;
-  right: 0;
-  width: 60px;
-  height: 40px;
-  margin-right: 1.2rem;
-  background-color: #191b25;
-}
-
-.menu-dialog-popup__item-close {
+.burger--cross {
   width: 24px;
   height: 24px;
 }
+
+.menu-dialog-popup__icon-close {
+  position: absolute;
+  top: -55px;
+  right: 23px;
+  width: 50px;
+  height: 30px;
+  background-color: #191b25;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger__line--cross {
+  transform-origin: left center;
+}
+
+.burger__line--cross:first-of-type {
+  transform: rotate(45deg) translate(4px);
+}
+
+.burger__line--cross:last-of-type {
+  transform: rotate(-45deg) translate(4px);
+}
+
+/* .menu-dialog-popup__item-close {
+  width: 24px;
+  height: 24px;
+} */
 
 .navbar-list {
   display: inline-flex;
@@ -309,6 +350,13 @@ html {
   }
 }
 
+@media screen and (min-width: 1500px) {
+  .hero-img-back__item {
+    top: 90px;
+    max-height: 70vh;
+  }
+}
+
 .leader-section {
   margin-bottom: 15px;
 }
@@ -351,6 +399,7 @@ html {
 
 .leader-section__cards {
   width: 100vw;
+  max-width: 100%;
   display: flex;
   gap: 80px;
   overflow-x: auto;
@@ -838,7 +887,6 @@ html {
 }
 
 .confidence-form {
-  /* max-width: 81.6rem; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -850,8 +898,6 @@ html {
 @media screen and (max-width: 760px) {
   .confidence-form {
     justify-content: space-between;
-    /* flex-wrap: nowrap; */
-    /* flex-direction: column; */
   }
 }
 
@@ -875,21 +921,23 @@ html {
   outline: none;
 }
 
-.confidence-form__input {
+.confidence-form__input:not(:first-of-type) {
   margin-right: 6.4rem;
 }
 
 @media screen and (max-width: 760px) {
   .confidence-form__label {
-    flex-basis: calc(33% - 2.4);
+    flex-basis: calc(33%);
     font-size: 1.6rem;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
-    padding-bottom: 0.8rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 2.4rem;
   }
 
-  .confidence-form__input {
-    margin-right: 2.4rem;
+  .confidence-form__input:not(:first-of-type) {
+    margin-right: 0;
   }
 }
 
@@ -910,12 +958,6 @@ html {
   top: 0;
   object-fit: contain;
 }
-
-/* @media screen and (max-width: 760px) {
-  .confidence-form__img {
-    min-width: 300px;
-  }
-} */
 
 .confidence-form__input:first-of-type:checked
   + .confidence-form__label
@@ -940,9 +982,15 @@ html {
 }
 
 .confidence-form__line {
-  flex: 0 1 60%;
-  height: 1px;
-  background: #3e404a;
+  width: 100%;
+}
+
+.confidence-form__line::after {
+  content: "";
+  display: block;
+  width: 60%;
+  border-bottom: 1px solid #3e404a;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 760px) {
@@ -977,6 +1025,7 @@ html {
 
 .feedback-section__cards {
   width: 100vw;
+  max-width: 100%;
   display: flex;
   gap: 3rem;
   overflow-x: auto;
@@ -1042,20 +1091,26 @@ html {
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0.8rem;
 }
 
 .feedback-card__subtitle {
   color: #248ded;
   font-size: 1.8rem;
   font-weight: 400;
-  margin-left: 0.8rem;
 }
 
-/* @media screen and (max-width: 760px) {
-  .feedback-card__subtitle {
-    word-break: break-word;
+@media screen and (max-width: 760px) {
+  .feedback-card__title {
+    flex-direction: column;
   }
-} */
+
+  .feedback-card__subtitle {
+    margin-left: 0rem;
+  }
+}
 
 .feedback-card__text {
   color: #e0e2e9;
@@ -1094,6 +1149,7 @@ html {
 
 .news-section__cards {
   width: 100vw;
+  max-width: 100%;
   display: flex;
   gap: 3rem;
   overflow-x: auto;
