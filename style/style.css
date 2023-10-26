@@ -945,7 +945,7 @@ html {
   position: relative;
   width: 100vw;
   height: 0;
-  padding-bottom: 20%;
+  padding-bottom: 60%;
 }
 
 .confidence-form__item {
@@ -960,20 +960,20 @@ html {
 }
 
 .confidence-form__input:first-of-type:checked
-  + .confidence-form__label
-  ~ .confidence-form__item:first-of-type {
+  /* + .confidence-form__label */
+  ~ .confidence-form__img .confidence-form__item:first-of-type {
   visibility: visible;
 }
 
 .confidence-form__input:nth-of-type(2):checked
-  + .confidence-form__label
-  ~ .confidence-form__item:nth-of-type(2) {
+  /* + .confidence-form__label */
+  ~ .confidence-form__img .confidence-form__item:nth-of-type(2) {
   visibility: visible;
 }
 
 .confidence-form__input:nth-of-type(3):checked
-  + .confidence-form__label
-  ~ .confidence-form__item:nth-of-type(3) {
+  /* + .confidence-form__label */
+  ~ .confidence-form__img .confidence-form__item:nth-of-type(3) {
   visibility: visible;
 }
 
