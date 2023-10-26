@@ -240,7 +240,7 @@ html {
 
 .hero {
   min-height: 100vh;
-  padding-top: 30vh;
+  padding-top: 28vh;
   position: relative;
 }
 
@@ -253,6 +253,13 @@ html {
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
+    /* top: -2vh; */
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .hero {
+    padding-top: 22vh;
   }
 }
 
@@ -359,6 +366,7 @@ html {
 
 .leader-section {
   margin-bottom: 15px;
+  margin-top: 2rem;
 }
 
 .section__note {
