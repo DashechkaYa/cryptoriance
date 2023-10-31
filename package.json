@@ -2,14 +2,15 @@
   "name": "lesson-13-cryptoriance",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
   "scripts": {
-    "scss": "sass style.scss style.css --watch"
+    "dev": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.1",
     "parcel": "^2.10.1",
     "sass": "^1.69.5"
   }
